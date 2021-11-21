@@ -9,7 +9,7 @@ function getContent(fragmentId, callback) {
     });
 
     // Fetch the partial HTML file for the given fragment id.
-    const pathName = "/public/" + fragmentId + ".html";
+    var pathName = "/public/" + fragmentId + ".html";
     request.open("GET", pathName);
     request.setRequestHeader('Access-Control-Allow-Origin', '*');
     request.send({});

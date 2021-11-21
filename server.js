@@ -1,12 +1,12 @@
-const express = require('express');
-const bodyParser = require('body-parser');
-const path = require('path');
+var express = require('express');
+var bodyParser = require('body-parser');
+var path = require('path');
 
-const port = 3000;
-const app = express();
+var port = 3000;
+var app = express();
 app.use(bodyParser.json());
 
-app.use('/public', express.static('public'))
+app.use('/public', express.static('public'));
 
 app.get('/', function (req, res) {
     res.status(200).sendFile(path.join(__dirname, '/public/index.html'));
